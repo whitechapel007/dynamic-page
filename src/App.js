@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./components/HomePage";
 import SinglePage from "./components/SinglePage";
@@ -8,10 +8,6 @@ export const UserContext = React.createContext();
 const App = () => {
   const [users, setUsers] = useState([]);
   const [index, setIndex] = useState(0);
-
-  const increment = () => {};
-
-  const decrement = () => {};
 
   const fetchData = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
